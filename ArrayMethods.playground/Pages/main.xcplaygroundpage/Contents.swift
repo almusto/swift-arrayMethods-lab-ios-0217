@@ -17,7 +17,12 @@
 // write your code here
 
 
+var daysOfTheWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
+for day in daysOfTheWeek {
+  print(day)
+
+}
 
 
 
@@ -27,7 +32,12 @@
  */
 // write your code here
 
+let numDaysOfTheWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
+for day in numDaysOfTheWeek {
+  print("\(numDaysOfTheWeek.index(of: day)!+1) \(day)")
+
+}
 
 
 
@@ -37,6 +47,10 @@
  ### 3. Create an empty array of strings called 'emptyArray' and check to see if it's empty, printing appropriate messages.
  */
 // write your code here
+
+let emptyArray : [String] = []
+
+emptyArray.isEmpty
 
 
 
@@ -51,6 +65,9 @@
 // write your code here
 
 
+let reverseEmptyArray : [String] = []
+
+let isit : Bool = reverseEmptyArray.count > 0
 
 
 
@@ -65,7 +82,7 @@
 
 
 
-
+print(daysOfTheWeek.count)
 
 
 
@@ -75,7 +92,12 @@
  */
 // write your code here
 
+daysOfTheWeek.append("Saturday")
+daysOfTheWeek.append("Sunday")
 
+for (index, day) in daysOfTheWeek.enumerated() {
+  print("\(index + 1). \(day)")
+}
 
 
 
@@ -86,7 +108,10 @@
  */
 // write your code here
 
+let index = daysOfTheWeek.index(of: "Sunday")
 
+daysOfTheWeek.remove(at: index!)
+daysOfTheWeek.insert("Sunday", at: 0)
 
 
 
@@ -99,9 +124,13 @@
 // write your code here
 
 
+for day in daysOfTheWeek {
+  daysOfTheWeek.remove(at: daysOfTheWeek.index(of: day)!)
+  daysOfTheWeek.append(day.lowercased())
+}
 
 
-
+print(daysOfTheWeek)
 
 
 
@@ -111,7 +140,10 @@
 // write your code here
 
 
-
+if daysOfTheWeek.count > 5 {
+  daysOfTheWeek.remove(at: daysOfTheWeek.index(of: "Sunday")!)
+  daysOfTheWeek.remove(at: daysOfTheWeek.index(of: "Saturday")!)
+}
 
 
 
